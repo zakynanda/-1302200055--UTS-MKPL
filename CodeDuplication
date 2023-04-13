@@ -1,0 +1,13 @@
+private static int calculateDeductibleAmount(int numberOfChildren, boolean isMarried) {
+    int deductibleAmount = BASE_DEDUCTIBLE_AMOUNT;
+    if (isMarried) {
+        deductibleAmount += MARRIED_DEDUCTIBLE_AMOUNT;
+    }
+    deductibleAmount += CHILD_DEDUCTIBLE_AMOUNT * Math.min(numberOfChildren, 3);
+    return deductibleAmount;
+}
+
+public static int calculateTax(TaxCalculationInput input) {
+    int deductibleAmount = calculateDeductibleAmount(input.getNumberOfChildren(), input.isMarried());
+    // Use deductibleAmount instead of hard-coded values in tax calculation.
+}
