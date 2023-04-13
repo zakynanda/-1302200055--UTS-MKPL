@@ -1,3 +1,0 @@
-public static int calculateTax(TaxCalculationInput input) {
-    // Use input.getMonthlySalary(), input.getOtherMonthlyIncome(), etc. instead of method parameters.
-}
